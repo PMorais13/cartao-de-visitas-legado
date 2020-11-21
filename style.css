@@ -1,0 +1,140 @@
+body {
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    justify-content: center;
+    background-color: darkgray;
+}
+
+.container {
+    width: 55vh;
+    height: 70vh;
+    margin: 5vh;
+    background-color: #363636;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-around;
+    border-radius: 3%;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 5px 10px 15px;
+}
+
+.foto {
+    width: 20vh;
+    display: flex;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.nome {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    width: 70%;
+}
+
+.redeSocial {
+    display: flex;
+}
+
+a {
+    padding: 0 3vh;
+}
+
+.facebook {
+    width: 7vh;
+    transition: 1s;
+}
+
+.facebook:hover {
+    width: 9vh;
+}
+
+.linkedin {
+    width: 7vh;
+    transition: 1s;
+}
+
+.linkedin:hover {
+    width: 9vh;
+}
+
+.github {
+    width: 7vh;
+    transition: 1s;
+}
+
+.github:hover {
+    width: 9vh;
+}
+
+.frente {
+    /* position: absolute; */
+    text-align: center;
+    transform: rotatey(0deg);
+    backface-visibility: hidden;
+    transition: all .4s linear;
+}
+
+.fundo {
+    text-align: center;
+    transform: rotatey(180deg);
+    backface-visibility: hidden;
+    transition: all .4s linear;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+.nome:hover .frente {
+    transform: rotatey(-180deg);
+    cursor: pointer;
+}
+
+.nome:hover .fundo {
+    transform: rotatey(0deg);
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 70vh;
+        height: 90vh;
+        margin: 5vh;
+    }
+
+    .frente {
+        position: inherit;
+        text-align: center;
+    }
+}
+
+@media (max-width: 650px) {
+    .container {
+        width: 70vh;
+        height: 90vh;
+        margin: 5vh;
+    }
+
+    .frente {
+        position: inherit;
+        text-align: center;
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        width: 70vh;
+        height: 90vh;
+        margin: 5vh;
+    }
+
+    /* .fundo {
+        display: none;
+    } */
+
+    .frente {
+        position: inherit;
+        text-align: center;
+    }
+}
