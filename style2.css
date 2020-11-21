@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+  
+}
+
+.toolbar {
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    background-color: #181212 ;
+    transition: 1s;
+    display: flex;
+
+
+}
+
+.toolbar:hover {
+    display: table;
+    width: 10vh;
+    border-radius: 5%;
+    background-color:  #707070;
+}
+
+li {
+    /* text-align: center; */
+    display: none;
+    transform: rotatey(180deg);
+    backface-visibility: hidden;
+    transition: 1.2s linear;
+    /* filter: grayscale(100%);
+    -webkit-filter: grayscale(100%); */
+    width: 5vh;
+    background-color: rgb(185, 185, 185);
+    position: inherit;
+    
+}
+
+.toolbar:hover li {
+    transform: rotatey(0deg);
+    cursor: pointer;
+    width: 7vh;
+    height: 7vh;
+    background-color: blue;
+    display: list-item;
+    border-radius: 50%;
+
+    margin: 1.5vh;
+    align-items: center;
+    
+
+}
