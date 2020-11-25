@@ -4,37 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image"
+        content="https://media.discordapp.net/attachments/724064373361868840/779440577174962176/fotoPerfil.png">
     <link rel="stylesheet" href="style.css">
     <title>Paulo Henrique</title>
     <link rel="shortcut icon" href="/imagens/favicon.jpg" />
     <link rel="icon" href="/imagens/favicon.ico" type="image/x-icon" />
+
 </head>
 
 <body>
-    <div class="container">
-        <div>
-            <img class="foto"
-                src="https://media.discordapp.net/attachments/724064373361868840/779440577174962176/fotoPerfil.png" alt="foto de perfil">
-        </div>
+    
+    <div class="containerToolbar">
+        <input type="checkbox" id="check">
+        <label id="icone" for="check">
+            <img alt="icone hamburguer"class="hamburguer" src="imagens/icone.png">
+        </label>
 
-        <div class="nome">
-            <div class="frente">Paulo Henrique Morais dos Santos</div>
-            <div class="fundo">phmscout@gmail.com</div>
-        </div>
-
-        <div class="redeSocial">
-            <a href="https://www.facebook.com/paulohenrique.morais.9"><img class="facebook"
-                    src="https://media.discordapp.net/attachments/724064373361868840/779440578194309170/logoFace.png"
-                    alt="Logo Facebook"></a>
-            <a href="https://www.linkedin.com/in/paulo-henrique-9122a4188/"><img class="linkedin"
-                    src="https://media.discordapp.net/attachments/724064373361868840/779440576957382696/lgoLinkedin.png"
-                    alt="Logo Linkedin"></a>
-            <a href="https://github.com/PMorais13/"><img class="github"
-                    src="https://media.discordapp.net/attachments/724064373361868840/779440582165790730/logoGithub.png?width=427&height=427"
-                    alt="Logo Github"></a>
+        <div class="toolbar">
+            <nav>
+                <a href="index.html">
+                    <div class="link">Home</div>
+                </a>
+                <a href="">
+                    <div class="link">Em construção</div>
+                </a>
+                <a href="">
+                    <div class="link">Em construção</div>
+                </a>
+                <a href="">
+                    <div class="link">Em construção</div>
+                </a>
+            </nav>
 
         </div>
     </div>
+
+    <div class="conteudo">
+        <div class="container">
+            <div>
+                <img class="foto"
+                    src="https://media.discordapp.net/attachments/724064373361868840/779440577174962176/fotoPerfil.png"
+                    alt="foto de perfil">
+            </div>
+
+            <div class="nome">
+                <div class="frente">Paulo Henrique Morais dos Santos</div>
+                <div class="fundo">phmscout@gmail.com</div>
+            </div>
+
+            <div class="redeSocial">
+                <a href="https://www.facebook.com/paulohenrique.morais.9"><img class="facebook"
+                        src="https://media.discordapp.net/attachments/724064373361868840/779440578194309170/logoFace.png"
+                        alt="Logo Facebook"></a>
+                <a href="https://www.linkedin.com/in/paulo-henrique-9122a4188/"><img class="linkedin"
+                        src="https://media.discordapp.net/attachments/724064373361868840/779440576957382696/lgoLinkedin.png"
+                        alt="Logo Linkedin"></a>
+                <a href="https://github.com/PMorais13/"><img class="github"
+                        src="https://media.discordapp.net/attachments/724064373361868840/779440582165790730/logoGithub.png?width=427&height=427"
+                        alt="Logo Github"></a>
+
+            </div>
+        </div>
+
+        <div class="noturno">
+            <input type="checkbox" id="switch2">
+            <label id="switch" for="switch2">
+                <img alt="icone lua" class="lua" src="imagens/lua.png">
+            </label>
+        </div>
+    </div>
+    
+    <script src="index.js"></script>
 
 </body>
 

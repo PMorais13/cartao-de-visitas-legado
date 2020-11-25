@@ -1,9 +1,30 @@
+/*variáveis para o modo noturno*/
+
+:root {
+    --body-bg: darkgray;
+    --box-color: black;
+    --img-invert: none;
+    --img-noClick: brightness(0%);
+    --img-click: brightness(1000%);
+    --img-brilho: brightness();
+}
+
+.dark-mode:root {
+    --body-bg: #252525;
+    --box-color: #a5a3a3;
+    --img-invert: invert();
+    --img-noClick: brightness(1000%);
+    --img-click: brightness(200%);
+    --img-brilho: brightness(70%);
+}
+
+/*inicio da página*/
+
 body {
     margin: 0%;
     padding: 0%;
-    display: flex;
-    justify-content: center;
-    background-color: darkgray;
+    width: 100%;
+    background-color: var(--body-bg);
 }
 
 .container {
@@ -17,7 +38,17 @@ body {
     border-radius: 3%;
     align-items: center;
     flex-direction: column;
-    box-shadow: 5px 10px 15px;
+    box-shadow: 5px 10px 15px var(--box-color);
+}
+
+.alinhamentoVideo {
+    justify-content: center;
+    display: flex;
+}
+
+.conteudo {
+    justify-content: center;
+    display: flex;
 }
 
 .foto {
@@ -25,6 +56,7 @@ body {
     display: flex;
     text-align: center;
     border-radius: 50%;
+    filter: var(--img-brilho);
 }
 
 .nome {
@@ -44,7 +76,7 @@ a {
 
 .facebook {
     width: 7vh;
-    transition: 1s;
+    transition: .5s;
 }
 
 .facebook:hover {
@@ -53,7 +85,7 @@ a {
 
 .linkedin {
     width: 7vh;
-    transition: 1s;
+    transition: .5s;
 }
 
 .linkedin:hover {
@@ -62,7 +94,7 @@ a {
 
 .github {
     width: 7vh;
-    transition: 1s;
+    transition: .5s;
 }
 
 .github:hover {
@@ -137,4 +169,106 @@ a {
         position: inherit;
         text-align: center;
     }
+}
+
+.video {
+    margin: 10vh 0 0 0;
+    padding: 2vh 5vh;
+    background-color: #363636;
+    display: flex;
+    border-radius: 3%;
+    box-shadow: 5px 10px 15px;
+    text-align: center;
+}
+
+/* parte do mundo da musica */
+
+.video img {
+    border-radius: 2px;
+}
+
+/* parte do toolbar */
+
+.hamburguer {
+    filter: var(--img-noClick);
+    transition: .5s;
+}
+
+#check {
+    display: none;
+}
+
+#icone {
+    cursor: pointer;
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
+}
+
+.toolbar {
+    background-color: #363636;
+    height: 100%;
+    width: 200px;
+    position: absolute;
+    transition: all .3s linear;
+    left: -300px;
+}
+
+nav {
+    width: 100%;
+    position: absolute;
+    top: 60px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.link {
+    background-color: #494950;
+    padding: 20px;
+    font-family: 'Arial';
+    font-size: 12pt;
+    transition: all .3s linear;
+    color: #f4f4f9;
+    border-bottom: 2px solid #222;
+    opacity: 1;
+}
+
+.link:hover {
+    background-color: #a3b9c5;
+    color: rgb(79, 20, 94);
+    text-shadow: 2px 2px 4px #272727;
+    font-weight: bold;
+}
+
+#check:checked ~ .toolbar {
+    transform: translateX(300px);
+}
+
+#check:checked ~ .toolbar nav a .link {
+    opacity: 100%;
+}
+
+#check:checked ~ label img {
+    filter: var(--img-click) ;
+    transition: 1s;
+}
+
+/* parte do modo noturno */
+
+.noturno {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    transition: all 1s;
+}
+
+#switch2 {
+    display: none;
+}
+
+.lua {
+    width: 50px;
+    filter: var(--img-invert);
 }
